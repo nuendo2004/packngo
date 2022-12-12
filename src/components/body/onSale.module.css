@@ -1,0 +1,21 @@
+.slider_frame {
+  display: flex;
+  max-width: 1270px;
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .arrows {
+    display: none;
+  }
+  .slider_frame {
+    justify-content: center;
+  }
+}

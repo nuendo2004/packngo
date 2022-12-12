@@ -1,8 +1,9 @@
 import React from "react";
 import SearchBar from "../UI/SearchBar";
 import ProductThumbNail from "../UI/ProductThumbNail";
+import closeIcon from "../../static/icons/close.svg";
 
-const SearchPopUp = () => {
+const SearchPopUp = (props) => {
   const bestSelling = [
     {
       id: 1,
@@ -40,21 +41,40 @@ const SearchPopUp = () => {
           name={item.name}
           price={item.price}
           url={item.url}
-          size="mini"
+          // size="mini"
         />
       );
     });
   };
-  const mostSearched = () => {};
 
-  const renderResult = () => {};
+  const mostSearched = (
+    <div>
+      <p className="py-2 text-gray-500">Top selling products</p>
+      <div className="flex flex-col justify-center gap-4 sm:flex-row">
+        {bestSellTop3()}
+      </div>
+    </div>
+  );
+
+  const renderResult = (
+    <div>
+      <p className="py-2 text-gray-500">Are you looking for these goodies ?</p>
+      <div className="flex flex-col justify-center gap-4 sm:flex-row">
+        {bestSellTop3()}
+      </div>
+    </div>
+  );
 
   return (
-    <div className="p-8 w-screen shadow-lg bg-white z-20 fixed">
+    <div className="p-8 w-screen shadow-lg bg-white z-30 fixed">
+      <img
+        className="w-5 absolute right-8 cursor-pointer"
+        src={closeIcon}
+        alt="close button"
+        onClick={() => props.setShowSearch(false)}
+      />
       <SearchBar />
-      <div>
-        <div className="flex justify-center">{bestSellTop3()}</div>
-      </div>
+      {renderResult && mostSearched}
     </div>
   );
 };

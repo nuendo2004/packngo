@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+/*  ++++++ grid template ++++++ */
+.nav-cols-temp {
+  grid-template-columns: 25% 50% 25%;
+}
