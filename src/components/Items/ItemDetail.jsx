@@ -1,7 +1,17 @@
 import React from "react";
 
 const ItemDetail = () => {
-  return <div>ItemDetail</div>;
+  return (
+    <section>
+      <figure>
+        <a href="">
+          <img src="" alt="" />
+        </a>
+        <div></div>
+      </figure>
+      <div></div>
+    </section>
+  );
 };
 
 export default ItemDetail;
