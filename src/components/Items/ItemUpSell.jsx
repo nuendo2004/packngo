@@ -1,7 +1,8 @@
 import React from "react";
 
-const ItemUpSell = () => {
-  return <div>ItemUpSell</div>;
+const ItemUpSell = (props) => {
+  const list = props.item.relateProducts;
+  return <div></div>;
 };
 
 export default ItemUpSell;

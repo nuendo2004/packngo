@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Header/Navbar";
 import Hero from "../components/Header/Hero";
 import OnSale from "../components/body/OnSale";
 import Story from "../components/body/Story";
@@ -11,7 +10,6 @@ import ItemOfTheDay from "../components/body/ItemOfTheDay";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
       <OnSale />
       <Story />

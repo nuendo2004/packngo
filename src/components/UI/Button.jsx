@@ -15,6 +15,7 @@ const Button = (props) => {
       }}
       onMouseMove={() => setBgColor(props.hoverColor)}
       onMouseOut={() => setBgColor(props.bgColor)}
+      onClick={props.onClick}
     >
       {props.children}
     </button>

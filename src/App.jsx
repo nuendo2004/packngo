@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/Header/Navbar";
 import Home from "./pages/Home";
 import Item from "./pages/Item";
 import React, { useEffect } from "react";
@@ -10,6 +11,9 @@ function App() {
   const system = useSelector((state) => state.system.system);
 
   useEffect(() => {
+    dispatch(
+      setSystem({ height: window.innerHeight, width: window.innerWidth })
+    );
     window.addEventListener("resize", () => {
       dispatch(
         setSystem({ height: window.innerHeight, width: window.innerWidth })
@@ -23,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       {/* <Home /> */}
       <Item />
     </div>
