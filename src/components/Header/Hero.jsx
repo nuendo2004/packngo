@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "../../static/images/banner_main.webp";
 import Button from "../UI/Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
           </h1>
 
           <Button color={"white"} bgColor={"purple"}>
-            Get Started
+            <Link to={"/getStart"}>Get Started</Link>
           </Button>
         </div>
       </div>

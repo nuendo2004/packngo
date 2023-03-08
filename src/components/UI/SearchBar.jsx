@@ -33,6 +33,7 @@ const SearchBar = () => {
         placeholder="Enter search here..."
       />
     </div>
+    
   );
 };
 

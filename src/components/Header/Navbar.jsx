@@ -27,7 +27,9 @@ const Navbar = () => {
       <div className="sticky overflow-hidden top-0 bg-white py-4 grid nav-cols-temp items-center flex-nowrap border-b shadow-md z-20">
         {screenSize !== "PC" && <div className="">=</div>}
         <div className="px-8 flex justify-start max-md:justify-center">
-          <h2>Pack'n Go</h2>
+          <Link to="/">
+            <h2>Pack'n Go</h2>
+          </Link>
         </div>
         {screenSize === "PC" && navContent}
         <div>
@@ -40,7 +42,7 @@ const Navbar = () => {
             />
             {screenSize === "PC" && (
               <div className="px-4">
-                <Link>Account</Link>
+                <Link to="/myAccount">Account</Link>
               </div>
             )}
             <div className="md:px-8 max-md:px-3">

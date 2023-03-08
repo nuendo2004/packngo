@@ -5,7 +5,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={`${props.className} font-bold rounded-md px-8 py-1 ${
+      className={`${props.className} block font-bold rounded-md px-8 py-1 ${
         props.border && "border"
       } cursor-pointer`}
       style={{
